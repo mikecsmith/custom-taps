@@ -30,7 +30,7 @@ class Isync < Formula
 
   def install
     system "./autogen.sh" if build.head?
-    system "./configure", *std_configure_args, "--disable-silent-rules", , "--with-sasl=/opt/homebrew/opt/cyrus-sasl"
+    system "./configure", *std_configure_args, "--disable-silent-rules", "--with-sasl=/opt/homebrew/opt/cyrus-sasl"
     system "make", "install"
   end
 
